@@ -18,7 +18,7 @@
 <div align="center">
   <a href="https://github.com/sujamahat/Kareer"><strong>Repository</strong></a>
   ·
-  <a href="https://kareer.vercel.app"><strong>Live Demo</strong></a>
+  <a href="https://kareer-dun.vercel.app"><strong>Live Demo</strong></a>
   ·
   <a href="#getting-started"><strong>Run Locally</strong></a>
   ·
@@ -31,7 +31,7 @@
 
 Live demo:
 
-- [Kareer on Vercel](https://kareer.vercel.app)
+- [Kareer on Vercel](https://kareer-dun.vercel.app)
 
 ## Demo Status
 

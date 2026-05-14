@@ -1,7 +1,7 @@
 <div align="center">
   <h1>Kareer</h1>
   <p><strong>A career platform demo for international students in Korea, built with Next.js, TypeScript, and Tailwind CSS.</strong></p>
-  <p>I built this project as a polished frontend product prototype for students who need a clearer path from university life in Korea to visa-safe internships, resume preparation, career guidance, and job readiness.</p>
+  <p>I built Kareer as a frontend demo for international students in Korea who want a clearer path from university life to internships, resume preparation, visa-aware career planning, and job readiness.</p>
 </div>
 
 <div align="center">
@@ -18,6 +18,8 @@
 <div align="center">
   <a href="https://github.com/sujamahat/Kareer"><strong>Repository</strong></a>
   ·
+  <a href="https://kareer.vercel.app"><strong>Live Demo</strong></a>
+  ·
   <a href="#getting-started"><strong>Run Locally</strong></a>
   ·
   <a href="#pages"><strong>Pages</strong></a>
@@ -27,20 +29,9 @@
 
 ## Live Deployment
 
-This project is prepared for GitHub Pages deployment using GitHub Actions.
+Live demo:
 
-Expected GitHub Pages URL after deployment:
-
-```text
-https://sujamahat.github.io/Kareer/
-```
-
-If the link is not live yet, enable GitHub Pages in the repository settings:
-
-1. Go to **Settings**
-2. Open **Pages**
-3. Set **Source** to **GitHub Actions**
-4. Push to `main` and let the deploy workflow run
+- [Kareer on Vercel](https://kareer.vercel.app)
 
 ## Demo Status
 
@@ -57,9 +48,9 @@ This keeps the first version focused on the user interface, product flow, respon
 
 ## Why I Built This
 
-International students in Korea often have to figure out career planning, visa rules, internships, resumes, and recruiter communication separately. Kareer brings those pieces into one product concept.
+As an international student in Korea, I wanted to explore a product idea that brings career planning, visa awareness, internships, resumes, and recruiter communication into one place.
 
-The goal is to make the experience feel like a real career platform, not just a landing page:
+I wanted Kareer to feel like an actual product demo instead of only a landing page, so I included:
 
 - career dashboard for progress tracking
 - internship listings filtered around D-2 visa needs
@@ -79,7 +70,7 @@ The product focuses on three main problems:
 - preparing resumes and applications for Korean hiring expectations
 - understanding career steps, documents, and next actions clearly
 
-The current version is a frontend prototype, but the interface is structured so it can later support a real backend, user accounts, resume uploads, and AI-powered guidance.
+The current version is a frontend prototype, but I structured it so it can later grow into a full product with accounts, saved internships, resume uploads, and AI-powered career guidance.
 
 ## Pages
 
@@ -112,7 +103,7 @@ The homepage also scrolls through the main product sections so visitors can prev
 - Language: TypeScript
 - Styling: Tailwind CSS + custom CSS variables
 - Icons: Tabler Icons
-- Deployment target: GitHub Pages
+- Deployment target: Vercel
 
 ## Architecture
 
@@ -128,7 +119,7 @@ Next.js App Router
     |-- Global CSS design tokens
     |
     v
-Static export for GitHub Pages
+Static frontend deployment on Vercel
 ```
 
 There is no server-side business logic yet. All internship data, dashboard stats, visa checklist items, resume feedback, and chatbot messages are mocked inside the frontend.
@@ -144,7 +135,7 @@ There is no server-side business logic yet. All internship data, dashboard stats
 - Resume review score and feedback UI
 - Static chatbot conversation interface
 - Responsive layout for smaller screens
-- GitHub Pages deployment workflow
+- Vercel-ready frontend deployment
 
 ## Project Layout
 
@@ -159,12 +150,8 @@ app/
   layout.tsx             Root layout and theme setup
   page.tsx               Landing page and shared UI components
 
-.github/
-  workflows/
-    deploy-pages.yml     GitHub Pages deployment workflow
-
 public/
-  .nojekyll              Required for GitHub Pages static assets
+  .nojekyll              Static hosting compatibility file
 ```
 
 ## What I Built
@@ -174,22 +161,21 @@ public/
 - Added a scrollable homepage experience
 - Built reusable components for navigation, cards, sections, dashboard panels, and mock assistant messages
 - Added persistent dark/light mode using `localStorage`
-- Configured static export for GitHub Pages
-- Added a GitHub Actions workflow for deployment
+- Prepared the project for frontend deployment
 
 ## Engineering Challenges
 
-### 1. Preserving the original design
-
-The goal was not to redesign the product. I translated the provided HTML/CSS design into a Next.js app while keeping the same spacing, color system, typography, cards, dashboard layout, and overall product feel.
-
-### 2. Turning one prototype into real pages
+### 1. Turning one prototype into real pages
 
 The original design was a single-page prototype. I converted it into route-based static pages while keeping the homepage scrollable for a website-style demo.
 
-### 3. Making theme state feel global
+### 2. Making theme state feel global
 
 The dark/light toggle needed to work once across the whole website. I used `localStorage` and a root layout script so the selected theme persists when navigating between pages.
+
+### 3. Keeping the product clear without a backend
+
+Since this version is frontend-only, I used mock data in a way that still shows the full product idea: dashboards, listings, visa checks, resume feedback, and chatbot-style support.
 
 ## Tradeoffs
 
@@ -197,7 +183,7 @@ The dark/light toggle needed to work once across the whole website. I used `loca
 - The resume review page is visual only and does not process uploaded files yet
 - The chatbot page is a static interface and does not call an AI API yet
 - There is no login because this first version is focused on frontend presentation
-- GitHub Pages is simple for static hosting, while Vercel may be better later if server features are added
+- Vercel is the best fit for this Next.js frontend, especially if I add server features later
 
 ## Getting Started
 
@@ -233,27 +219,9 @@ out/
 
 ## Deployment
 
-### GitHub Pages
+### Vercel
 
-This project includes a GitHub Actions workflow at:
-
-```text
-.github/workflows/deploy-pages.yml
-```
-
-To deploy:
-
-1. Push the project to GitHub
-2. Open the repository settings
-3. Go to **Pages**
-4. Choose **GitHub Actions** as the source
-5. Push to `main`
-
-The workflow will install dependencies, build the static site, upload the `out/` folder, and deploy it to GitHub Pages.
-
-### Vercel Alternative
-
-This is a Next.js app, so it can also be deployed on Vercel:
+This is a Next.js app, so I am using Vercel for the live demo.
 
 ```bash
 vercel
@@ -282,7 +250,7 @@ vercel --prod
 - Converted a static UI design into a responsive multi-page website with reusable components
 - Implemented persistent dark/light mode across routes using local storage and root-level theme setup
 - Created mock product flows for internships, visa checking, resume review, chatbot assistance, and dashboard tracking
-- Configured static export and GitHub Pages deployment with GitHub Actions
+- Prepared the project for Vercel deployment
 
 ## Recruiter Summary
 
@@ -291,6 +259,5 @@ This project demonstrates:
 - frontend product design implementation
 - responsive UI engineering
 - component-based React development
-- static deployment with GitHub Pages
+- static frontend deployment with Vercel
 - practical product thinking for international student career support
-

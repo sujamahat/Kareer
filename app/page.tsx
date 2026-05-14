@@ -5,9 +5,11 @@ import Link from "next/link";
 
 const navItems = [
   ["Dashboard", "/dashboard"],
+  ["Roadmap", "/roadmap"],
   ["Internships", "/internships"],
   ["Visa Checker", "/visa"],
   ["Resume Review", "/resume"],
+  ["Mentors", "/mentors"],
   ["Chatbot", "/chatbot"],
 ];
 
@@ -628,9 +630,11 @@ export default function Home() {
       <main>
         <Landing />
         <Dashboard />
+        <Roadmap />
         <Internships />
         <Visa />
         <Resume />
+        <Mentors />
         <Assistant />
       </main>
       <Footer />
